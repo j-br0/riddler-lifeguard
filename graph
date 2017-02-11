@@ -1,0 +1,30 @@
+import matplotlib.pyplot as plt
+
+plt.figure()
+
+def graph_runs():
+    runtimes = []
+    swimtimes = []
+    totaltimes = []
+    x = []
+    for i in range(100000):
+        r = i/1000
+        nr = 100 - r
+        s = ((nr ** 2) + (100 ** 2)) ** .5
+        timerun = r * .15
+        timeswum = s * .75
+        timeall = timerun + timeswum
+        runtimes.append(timerun)
+        swimtimes.append(timeswum)
+        totaltimes.append(timeall)
+        x.append(r)
+    plt.plot(x, totaltimes, label = "Total Time")
+    plt.xlabel("Distance Run")
+    plt.ylabel("Time")
+    plt.savefig("swimgraph1.png")
+    plt.plot(x, runtimes, label = "Time Running")
+    plt.plot(x, swimtimes, label = "Time Swimming")
+    plt.legend(loc="best")
+    plt.savefig("swimgraph2.png")
+
+graph_runs()
