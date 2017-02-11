@@ -1,6 +1,6 @@
 def save_time(r): 
     nr = 100 - r 
-    s = ((nr ** 2) + (100 ** 2)) ** .5 #swim distance is hypotenuse of triangle with sides of distance not run (nr) and 100
+    s = ((nr ** 2) + (100 ** 2)) ** .5 # swim distance is hypotenuse of triangle with sides of distance not run (nr) and 100
     time_run = r * .15
     time_swum = s * .75
     total_time = time_run + time_swum
