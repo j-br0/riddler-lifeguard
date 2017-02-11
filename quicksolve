@@ -15,3 +15,5 @@ def lotta_runs():
             lowest_time = t
             run = x
     return (lowest_time, run)
+    
+print lotta_runs()
